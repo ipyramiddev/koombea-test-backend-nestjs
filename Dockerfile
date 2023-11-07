@@ -1,5 +1,5 @@
 # Use the official Node.js image as the base image
-FROM node:14
+FROM node:18
 
 # Set the working directory in the container
 WORKDIR /app
@@ -14,7 +14,7 @@ RUN npm install
 COPY . .
 
 # Expose the port where your NestJS application will run
-EXPOSE 3000
+EXPOSE 3001
 
 # Start the application
 CMD [ "npm", "run", "start:prod" ]
